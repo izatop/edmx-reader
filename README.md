@@ -1,5 +1,7 @@
 # edmx-reader
 
+EDMX Reader for JavaScript.
+
 ## Getting Started
 
 Install the package:
