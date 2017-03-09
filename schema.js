@@ -6,7 +6,7 @@ const EDMX_NS = 'http://schemas.microsoft.com/ado/2007/06/edmx';
 const EDMX_SCHEMA_NS = 'http://schemas.microsoft.com/ado/2009/11/edm';
 const EDMX_METADATA_NS = 'http://schemas.microsoft.com/ado/2007/08/dataservices/metadata';
 const stringToBoolean = str => str === 'true' ? true : (str === 'false' ? false : undefined);
-const normalizeType = str => !!str ? str.substr(str.indexOf('.') + 1) : undefined;
+const normalizeType = str => str;
 class Schema {
     constructor(document) {
         const [dataServices] = document.query('/DataServices', EDMX_NS);
