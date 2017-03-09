@@ -1,11 +1,10 @@
 import {join} from 'path';
 import {createReadStream} from 'fs';
 import * as test from "tape";
-import {Reader} from "./reader";
+import convert from "./index";
 
 test('Reader', async t => {
-    const reader = new Reader();
-    const res = await reader.convert(createReadStream(join(__dirname, 'reader.spec.edmx.xml')));
+    const res = await convert(createReadStream(join(__dirname, 'reader.spec.edmx.xml')));
 
     t.plan(8);
     t.equal(res.Namespace, 'ODataDemo');

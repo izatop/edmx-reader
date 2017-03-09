@@ -11,10 +11,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = require("path");
 const fs_1 = require("fs");
 const test = require("tape");
-const reader_1 = require("./reader");
+const index_1 = require("./index");
 test('Reader', (t) => __awaiter(this, void 0, void 0, function* () {
-    const reader = new reader_1.Reader();
-    const res = yield reader.convert(fs_1.createReadStream(path_1.join(__dirname, 'reader.spec.edmx.xml')));
+    const res = yield index_1.default(fs_1.createReadStream(path_1.join(__dirname, 'reader.spec.edmx.xml')));
     t.plan(8);
     t.equal(res.Namespace, 'ODataDemo');
     t.same(res.Metadata, { DataServiceVersion: '3.0', MaxDataServiceVersion: '3.0' });
