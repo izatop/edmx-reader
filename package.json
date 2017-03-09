@@ -1,6 +1,6 @@
 {
   "name": "edmx-reader",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "EDMX Reader for JavaScript",
   "main": "index.js",
   "types": "index.d.ts",
